@@ -24,7 +24,7 @@
                 <td>
                   <div class="btn-group"><button class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">Running</button>
                       <div class="dropdown-menu"> 
-                          <a class="dropdown-item" href="#" onclick='$(".modal").show()'>Restart</a>
+                          <a class="dropdown-item restart" href="#">Restart</a>
                           <div class="dropdown-divider"></div> 
                           <a class="dropdown-item" href="#">View log</a>
                       </div>
@@ -36,7 +36,7 @@
                 <td>
                   <div class="btn-group"><button class="btn btn-outline-danger dropdown-toggle" data-toggle="dropdown">Stopped</button>
                     <div class="dropdown-menu"> 
-                        <a class="dropdown-item" href="#" onclick='$(".modal").show()'>Start</a>
+                        <a class="dropdown-item" href="#">Start</a>
                         <div class="dropdown-divider"></div> 
                         <a class="dropdown-item" href="#">View log</a>
                     </div>
@@ -88,3 +88,10 @@
      background-color: grey;
   }
 </style>
+
+
+<script>
+    $(".restart").click(function(){
+        $(".modal").show();
+    })
+</script>
