@@ -15,35 +15,34 @@
             <thead>
               <tr>
                 <th>Channel</th>
-                <th>Options</th>
+                <th>Uptime</th>
+                <th>Options<br></th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>BBC One</td>
+                <td>2 days 15 hours<br></td>
                 <td>
                   <div class="btn-group"><button class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">Running</button>
-                      <div class="dropdown-menu"> 
-                          <a class="dropdown-item restart" href="#">Restart</a>
-                          <div class="dropdown-divider"></div> 
-                          <a class="dropdown-item" href="#">View log</a>
-                      </div>
+                    <div class="dropdown-menu"> <a class="dropdown-item restart" href="#">Restart</a>
+                      <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">View log</a> </div>
                   </div>
                 </td>
               </tr>
               <tr>
                 <td>BBC Two</td>
+                <td>2 days 15 hours </td>
                 <td>
                   <div class="btn-group"><button class="btn btn-outline-danger dropdown-toggle" data-toggle="dropdown">Stopped</button>
-                    <div class="dropdown-menu"> 
-                        <a class="dropdown-item" href="#">Start</a>
-                        <div class="dropdown-divider"></div> 
-                        <a class="dropdown-item" href="#">View log</a>
-                    </div>
+                    <div class="dropdown-menu"> <a class="dropdown-item" href="#">Start</a>
+                      <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">View log</a> </div>
+                  </div>
                 </td>
               </tr>
               <tr>
                 <td>ITV 1</td>
+                <td>2 days 15 hours </td>
                 <td>
                   <div class="btn-group"><button class="btn btn-outline-warning dropdown-toggle" data-toggle="dropdown">Restarting</button>
                     <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a>
@@ -64,36 +63,27 @@
           <h4 class="modal-title text-left">You are about to restart BBC One</h4>
         </div>
         <div class="modal-body">
-          
-          <div class="form-group row">
-            <label for="example-text-input" class="col-2 col-form-label">Password</label>
-            <div class="col-10">
-              <input class="form-control" type="password" value="" id="example-text-input">
-            </div>
+          <div class="form-group row"> <label for="example-text-input" class="col-2 col-form-label">Password</label>
+            <div class="col-10"> <input class="form-control" type="password" value="" id="example-text-input"> </div>
           </div>
-          
-        <div class="modal-footer"> <a class="btn btn-default" data-dismiss="modal">Close</a> <a class="btn btn-success" style="cursor: pointer;">Restart<br></a> </div>
+          <div class="modal-footer"> <a class="btn btn-default" data-dismiss="modal">Close</a> <a class="btn btn-success" style="cursor: pointer;">Restart<br></a> </div>
+        </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
+    <style>
+      .modal-backdrop {
+        background-color: grey;
+      }
+    </style>
+    <script>
+      $(".restart").click(function(){
+          $(".modal").show();
+      })
+    </script>
   </div>
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-  <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
 </body>
 
 </html>
-
-<style>
-  .modal-backdrop {
-     background-color: grey;
-  }
-</style>
-
-
-<script>
-    $().ready(function(){
-        $(".restart").click(function(){
-            $(".modal").show();
-        })
-    })
-</script>
