@@ -12,7 +12,9 @@
       <div class="row">
         <div class="col-md-12">
           <ul class="breadcrumb">
-            <li class="breadcrumb-item"> Channels </li>
+            <li class="breadcrumb-item"> <a href="#">Home</a> </li>
+            <li class="breadcrumb-item"> <a href="#">Library</a> </li>
+            <li class="breadcrumb-item active">Data</li>
           </ul>
         </div>
       </div>
@@ -31,7 +33,7 @@
                 <td>BBC One</td>
                 <td>2 days 15 hours<br></td>
                 <td>
-                  <div class="btn-group"><button class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown">Running</button>
+                  <div class="btn-group"><button class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">Running</button>
                     <div class="dropdown-menu"> <a class="dropdown-item restart" href="#">Restart</a>
                       <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">View log</a> </div>
                   </div>
@@ -51,7 +53,7 @@
                 <td>ITV 1</td>
                 <td>2 days 15 hours </td>
                 <td>
-                  <div class="btn-group"><button class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown">Restarting</button>
+                  <div class="btn-group"><button class="btn btn-outline-warning dropdown-toggle" data-toggle="dropdown">Restarting</button>
                     <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a>
                       <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                   </div>
@@ -77,11 +79,19 @@
         </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
     <style>
       .modal-backdrop {
         background-color: grey;
       }
-    </style>g
+    </style>
+    <script>
+      $(".restart").click(function(){
+          $(".modal").show();
+      })
+    </script>
   </div>
   <div class="py-5">
     <div class="container">
@@ -96,17 +106,18 @@
       <div class="row">
         <div class="col-md-12">
           <ul class="breadcrumb">
-            <li class="breadcrumb-item"> <a href="#">Channels</a> </li>
-            <li class="breadcrumb-item active">BBC One</li>
+            <li class="breadcrumb-item"> <a href="#">Home</a> </li>
+            <li class="breadcrumb-item active">Data</li>
           </ul>
-          <h1 class="display-4">BBC One</h1>
+          <h1 class="display-3">BBC One</h1>
         </div>
       </div>
       <div class="row">
+        <hr>
         <div class="col-md-4">
           <ul class="nav nav-pills flex-column">
             <li class="nav-item"> <a href="#" class="active nav-link">Audit trail<br></a> </li>
-            <li class="nav-item"> <a class="nav-link" href="#">...</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Debug<br></a> </li>
             <li class="nav-item"> <a href="#" class="nav-link">...</a> </li>
           </ul>
         </div>
@@ -139,13 +150,49 @@
           </table>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-4">
+              <ul class="nav nav-pills flex-column">
+                <li class="nav-item"> <a href="#" class="active nav-link">Audit trail<br></a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Debug<br></a> </li>
+                <li class="nav-item"> <a href="#" class="nav-link">...</a> </li>
+              </ul>
+            </div>
+            <div class="col-md-8 ">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Action</th>
+                    <th>User</th>
+                    <th>Status<br></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Restart<br></td>
+                    <td>Guy Freestone</td>
+                    <td>Successful</td>
+                  </tr>
+                  <tr>
+                    <td>Start<br></td>
+                    <td>Guy Freestone</td>
+                    <td>Successful</td>
+                  </tr>
+                  <tr>
+                    <td>Stop</td>
+                    <td>Richard Winder</td>
+                    <td>Failed</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>
 
 </html>
-
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-    <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
-    <script src="https://richard-richwestcoast.c9users.io/encoder-restart-interface/javascript.js"></script>
