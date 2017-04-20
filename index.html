@@ -101,6 +101,34 @@
       })
     </script>
   </div>
+  <div class="modal modal-backdrop">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title text-left">Action audit trail</h4>
+        </div>
+        <div class="modal-body"> asdf </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
+    <style>
+      .modal-backdrop {
+        background-color: grey;
+      }
+
+      .dotted {
+        border-bottom: 1px dashed #999;
+        text-decoration: none;
+      }
+    </style>
+    <script>
+      $(".restart").click(function(){
+          $(".modal").show();
+      })
+    </script>
+  </div>
   <div class="py-5">
     <div class="container">
       <div class="row">
@@ -126,7 +154,7 @@
         <div class="col-md-4">
           <ul class="nav nav-pills flex-column">
             <li class="nav-item"> <a class="active nav-link" href="#">Audit trail<br></a> </li>
-            <li class="nav-item"> <a href="#" class="nav-link">Stats</a> </li>
+            <li class="nav-item"> <a href="#" class="nav-link">Channel statistics</a> </li>
           </ul>
         </div>
         <div class="col-md-8">
@@ -187,11 +215,11 @@
             <div class="col-md-4">
               <ul class="nav nav-pills flex-column">
                 <li class="nav-item"> <a class="nav-link" href="#">Audit trail<br></a> </li>
-                <li class="nav-item"> <a href="#" class="nav-link active">Stats<br></a> </li>
+                <li class="nav-item"> <a href="#" class="nav-link active">Channel statistics</a> </li>
               </ul>
             </div>
             <div class="col-md-8 ">
-              <h1 class="">Channel stats</h1> <span>Last updated: 16h04 on 20 Apr 2017 <a href="#force-update-now">Force update now</a></span>
+              <h1 class="">Channel statistics</h1> <span>Last updated: 16h04 on 20 Apr 2017 <a href="#force-update-now">Force update now</a></span>
               <table class="table">
                 <thead>
                   <tr>
